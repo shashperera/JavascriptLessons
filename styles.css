@@ -34,12 +34,12 @@ img {
   height: auto;
 }
 :root {
-  --primary-color: #ffb600;
+  --primary-color: #5ebdfd;
   --primary-light-color: #ffd967;
   --accent-color: #ff7f63;
   --black: #000;
-  --white: #fff;
-  --background-color: #0a0a0a;
+  --white: #ffffff;
+  --background-color: #08032e;
 }
 body {
   font-family: 'Montserrat', sans-serif;
@@ -147,11 +147,7 @@ header svg {
 }
 
 .primary-gradient {
-  background: linear-gradient(
-    90.13deg,
-    var(--primary-color) 49.01%,
-    var(--primary-light-color) 63.71%
-  );
+  background: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -186,12 +182,29 @@ header svg {
   );
   color: var(--black);
 }
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+  margin: 10px;
+  padding: 15px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 10px #eee;
+  /* border-radius: 10px; */
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
 .btn-secondary {
-  background: linear-gradient(
-    90.13deg,
-    var(--primary-color) 49.01%,
-    var(--primary-light-color) 63.71%
-  );
+  background: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -201,6 +214,24 @@ header svg {
 .btn:hover {
   transform: translateY(-2px);
 }
+
+/* Add your CSS styles here */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex-basis: calc(33.33% - 20px); /* Adjust the width as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
 
 footer {
   text-align: center;

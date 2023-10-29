@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet"> <!-- Link to your stylesheet -->
+  <title>Portfolio - Name</title>
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 10px;
+      padding: 10px;
+      background-color: #08103a;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <pre>
+      //1. var & let difference
+      var num = 1;
+      if (num == 1) {
+         var test = 'inside if';
+         let tes = 'inside if let';
+         console.log(tes);
+      }
+      console.log(test); //inside if
+      console.log(tes); // Reference error, tes is not defined
+    </pre>
+  </div>
+
+  <div class="card">
+    <pre>
+      //2. var function scope and let block scope
+      function chkvarletscope() {
+          let x = 10;
+          if (true) {
+              let y = 20;
+              let x = y;
+              console.log(x); //20
+              console.log(y); //20
+          }
+          console.log(x); //10
+          console.log(y); //Reference error
+      }
+
+      chkvarletscope()
+    </pre>
+  </div>
+
+  <div class="card">
+    <pre>
+      //3. const
+      function constScope(){
+          let x = 10;
+          if(true){
+              const y = 3;
+              console.log(x); //10
+              console.log(y); //3
+              y=5; //TypeError: Assignment to constant variable
+              y=x; //TypeError: Assignment to constant variable
+          }
+          console.log(y); //Reference error
+      }
+
+      constScope();
+    </pre>
+  </div>
+
+  <div class="card">
+    <pre>
+      //4.1 Objects
+      const Student = {
+          name: "Shash",
+          age: 25
+      }
+      console.log(Student.name); //Shash
+    </pre>
+  </div>
+
+  <div class="card">
+    <pre>
+      //4.2 Objects with new keyword
+      var Animal = new Object();
+      Animal.type = "Dog";
+      Animal.color = "Brown";
+      console.log(`Name: ${Animal.type}, Color: ${Animal.color}`); //Name: Dog, Color: Brown
+    </pre>
+  </div>
+
+  <div class="card">
+    <pre>
+      //4.3 Creating an object using the object constructor. 
+      function animal(name, color) {
+          this.name = name;
+          this.color = color;
+      }
+      var animall = animal("Cat", "White");
+      // console.log(animall.name);
+    </pre>
+  </div>
+
+  <div class="card">
+    <pre>
+      //4.4 Class implementation
+      class Bird {
+          constructor(name, color) {
+              this.name = name;
+              this.age = age;
+          }
+      }
+
+      console.log(Bird.name); //Bird
+    </pre>
+  </div>
+
+  <div class="card">
+    <pre>
+      //5. String concatenation using template literals
+      const name = "Shashi";
+      const age = "40";
+      const country = "Finland";
+      const output = `Hi, I am ${name} and I am ${age} years old. I am from ${country}.`;
+      console.log(output); //Hi, I am Shashi and I am 40 years old. I am from Finland.
+    </pre>
+  </div>
+
+  <!-- Add more cards for other questions if needed -->
+
+</body>
+</html>
