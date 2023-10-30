@@ -1,4 +1,3 @@
 # My Portfolio
 
-# Javascript Lessons
-Learn javascript from scratch.
+My portfolio including bio, my projects and contact information.
