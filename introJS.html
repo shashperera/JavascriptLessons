@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +17,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="card">
     <pre>
@@ -127,7 +129,45 @@
     </pre>
   </div>
 
-  <!-- Add more cards for other questions if needed -->
+  <div class="card">
+    <pre>
+      //6. Classes
+      class Cars {
+
+        constructor(name, maker, price) {
+            this.name = name;
+            this.maker = maker;
+            this.price = price;
+        }
+
+        getDetails() {
+            return (`The name of the car is ${this.name}.`)
+        }
+      }
+
+      let car1 = new Cars('Rolls Royce Ghost', 'Rolls Royce', '$315K');
+      let car2 = new Cars('Mercedes AMG One', 'Mercedes', '$2700K');
+
+      console.log(`${car1.name} is priced at ${car1.price}`); //Rolls Royce Ghost is priced at $315K
+      console.log(`${car2.name}'s maker is ${car1.maker}`); //Mercedes AMG One's maker is Rolls Royce
+    </pre>
+  </div>
+
+  <div class="card">
+    <pre>
+      //7. Using this
+      //this keyword is a reference to the current execution context.
+      const Animal = {
+          property: 'Name',
+          myMethod: function () {
+              console.log(this.property);
+          }
+      };
+      Animal.myMethod(); // this refers to myObject = Name
+    </pre>
+  </div>
+
 
 </body>
+
 </html>
