@@ -33,10 +33,12 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
 :root {
   --primary-color: #5ebdfd;
   --primary-light-color: #ffd967;
-  --accent-color: #ff7f63;
+  --accent-color: #69c7f6;
   --black: #000;
   --white: #ffffff;
   --background-color: #08032e;
@@ -52,6 +54,16 @@ p {
   font-size: 18px;
   line-height: 22px;
 }
+
+a{
+  text-decoration: none;
+  color: black;
+  }
+  
+  a:visited{
+  text-decoration: none;
+  color: black;
+  }
 
 h1 {
   font-size: calc(35px + 10 * (100vw - 360px) / 1560);
@@ -111,17 +123,19 @@ header svg {
   background: var(--background-color);
   border-radius: 10px;
   padding: 2rem;
+  height: 500px;
 }
 .project .title {
   margin-bottom: 1rem;
 }
 .project .description {
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
+  height: 120px;
 }
 .skills span {
   background: #1e1e1e;
   border-radius: 8.5px;
-  color: var(--primary-color);
+  color: cyan;
   font-size: 10px;
   padding: 0.3rem;
 }
